@@ -1,0 +1,46 @@
+docker start containerid
+
+docker run -it --name dpy27 -d -p 88:8888 deepakrohilla13/img_tfsy
+docker run -it -d deepakrohilla13/anaconda2 (run image)
+docker exec -it dpy27 bash (execute command in running container)
+docker stop angry_spence (stop container)
+
+
+
+
+tfsy default directory = /opt/tensorflow/syntaxnet
+
+/etc/tensorflow/syntaxnet/tensorflow/tensorflow/tools/docker/run_jupyter.sh
+jupyter notebook "$@"
+jupyter notebook --notebook-dir='/'
+root@0fd2c8987dba:/opt/tensorflow/syntaxnet# echo 'database software' | syntaxnet/demo.sh
+
+
+
+docker ps (list containers)
+docker ps -a (for history)
+docker images (list images)
+docker run hello-world
+docker pull image_name
+docker pull imagename:10:34
+docker rmi image_name:34:55
+docker rm
+docker run -d (background)
+docker run -it (intractive)
+docker run --name temp (name of container)
+ps -elf (exit from intractive mode without kiling it ) or ctrl P+Q
+docker stop $(docker ps-aq) (a for list q for id)
+docker rm  $(docker ps-aq)
+
+docker commit <container-id> username/imagename (Save the running container as a docker image)
+
+docker push username/imagename (Push the container to the Docker Hub)
+
+
+sudo docker attach 665b4a1e17b6 #by ID
+
+sudo docker attach loving_heisenberg #by Name
+
+
+sudo docker exec -i -t 665b4a1e17b6 /bin/bash #by ID (new instanance of bash)
+sudo docker exec -i -t loving_heisenberg /bin/bash #by Name

@@ -1,0 +1,6 @@
+git log --oneline | wc -l (count number of commits)
+git log --oneline --grapy
+git shortlog
+git shortlog -sne (summary and order and email)
+
+
